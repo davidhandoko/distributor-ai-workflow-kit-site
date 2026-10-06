@@ -88,12 +88,26 @@ footer{border-top:1px solid var(--line)}
 .policy-title{font-size:clamp(2.6rem,6vw,4.8rem)}
 .policy h2{font-size:1.55rem;margin-top:42px}
 .policy p{color:#c7d0d8}
+
+.proof-section{background:linear-gradient(180deg,#0f1720,#101b25)}
+.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.proof-panel{border:1px solid var(--line);border-radius:22px;background:var(--panel);padding:24px}
+.proof-output{background:linear-gradient(145deg,rgba(214,255,88,.08),var(--panel))}
+.proof-label{font-size:.76rem;letter-spacing:.12em;font-weight:900;color:var(--accent);margin-bottom:16px}
+.chat-bubble{background:#0b141d;border:1px solid var(--line);border-radius:18px 18px 18px 4px;padding:20px;font-size:1.08rem;line-height:1.7;margin-bottom:14px}
+.recap-row{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:11px 0;border-bottom:1px solid var(--line)}
+.recap-row:last-child{border-bottom:0}
+.recap-row span{color:var(--muted)}
+.proof-next{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:18px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.02)}
+
 @media(max-width:900px){
-  .hero-grid,.compare,.interest-box{grid-template-columns:1fr}
+  .hero-grid,.compare,.interest-box,.proof-grid{grid-template-columns:1fr}
   .cards{grid-template-columns:repeat(2,1fr)}
   .pricing{grid-template-columns:1fr}
 }
 @media(max-width:600px){
+  .proof-next{flex-direction:column;align-items:flex-start}
+  .recap-row{grid-template-columns:1fr;gap:2px}
   .wrap{width:min(var(--max),calc(100% - 24px))}
   .hero{padding:58px 0 52px}
   h1{font-size:3.05rem}
